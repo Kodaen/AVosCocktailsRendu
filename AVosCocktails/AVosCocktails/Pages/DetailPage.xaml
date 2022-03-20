@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AVosCocktails.Pages.DetailPage"
+             Shell.BackgroundColor="#88111B"
+             Shell.TitleColor="White">
+    <Shell.TitleView>
+        <Label
+                    class="test"
+                    FontSize="30"
+                    Text="{Binding Name}"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    FontAttributes="Bold,Italic"
+                    TextTransform="Uppercase"
+        />
+    </Shell.TitleView>
+    <ScrollView BackgroundColor="#AC1522">
+        <StackLayout Spacing="0">
+
+            <Image 
+                Aspect="AspectFill"
+                HeightRequest="300"
+                Source="{Binding Image}"
+                />
+
+        <Label
+                class="test"
+                Text="TAGS"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="White"
+                WidthRequest="500"
+                HorizontalTextAlignment="Center"  
+                BackgroundColor="#88111B" 
+                Padding="0, 0, 0, 5"
+                />
+
+
+
+        <FlexLayout x:Name="FlexTags" JustifyContent="SpaceEvenly" Wrap="Wrap" Margin="0,7"/>
+
+
+
+        <Label
+                Text="INGREDIENTS"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="White"
+                WidthRequest="500"
+                HorizontalTextAlignment="Center"  
+                BackgroundColor="#88111B" 
+                Padding="0, 0, 0, 5"
+                />
+        
+        <Grid x:Name="GridIngredients" Margin="0,7">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <Label
+                Text="INSTRUCTIONS"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="White"
+                WidthRequest="500"
+                HorizontalTextAlignment="Center"  
+                BackgroundColor="#88111B" 
+                Padding="0, 0, 0, 5"
+                />
+
+        <Label
+                Margin="0,7"
+                Text="{Binding Instructions}"
+                TextColor="White"
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Padding="0,0,0, 30"
+                />
+
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

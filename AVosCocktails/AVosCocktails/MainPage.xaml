@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:AVosCocktails.Pages"
+       x:Class="AVosCocktails.MainPage
+       "
+       >
+    <TabBar>
+        
+        <ShellContent Icon="HomeLogo.png"
+                      Shell.TitleColor="#88111B"
+                      Shell.BackgroundColor="#EAEAEA"
+                      >
+            <pages:HomePage>
+            </pages:HomePage>
+        </ShellContent>
+        
+        <ShellContent Icon="CocktailListLogo.png" 
+                      Shell.TitleColor="#88111B"
+                      Shell.BackgroundColor="#EAEAEA">
+            <pages:CocktailListPage>
+            </pages:CocktailListPage>
+        </ShellContent>
+        
+        <ShellContent Icon="AddLogo.png"
+                      Shell.TitleColor="#88111B"
+                      Shell.BackgroundColor="#EAEAEA">
+            <pages:AddPage>
+            </pages:AddPage>
+        </ShellContent>
+        
+        <ShellContent Icon="MysteryLogo.png"
+                      Shell.TitleColor="#88111B"
+                      Shell.BackgroundColor="#EAEAEA">
+            <pages:MysteryPage>
+            </pages:MysteryPage>
+        </ShellContent>
+        
+    </TabBar>
+
+    
+</Shell>

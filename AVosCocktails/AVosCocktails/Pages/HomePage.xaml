@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AVosCocktails.Pages.HomePage"
+             Shell.NavBarIsVisible="False"
+             >
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="#88111B">
+
+
+
+            <Image HeightRequest="200"  Source="logo.jpg"
+                   BackgroundColor="#2D2E2D"
+                    Margin="0"
+                   ></Image>
+                
+            
+            <Label Text="WELCOME !"
+                   TextColor="White"
+                   VerticalOptions="Start" 
+                   VerticalTextAlignment="Start"
+                   HorizontalOptions="FillAndExpand"
+                   FontSize="50"
+                   BackgroundColor="#AC1522" 
+                   HorizontalTextAlignment="Center"
+                   Margin="0, -6 , 0, 0"
+                   />
+
+
+            <FlexLayout JustifyContent="SpaceAround"
+                        VerticalOptions="FillAndExpand"
+                        AlignItems="Start"
+                        Direction="Column"
+                        >
+                <StackLayout >
+                    <Label TextColor="White" Text="DISCOVER" FontSize="25" TextTransform="Uppercase" Margin="10,0,0,0" />
+                    <Label 
+                           TextColor="White" 
+                           Text="Cocktails you've never seen before !" 
+                           FontSize="20"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label TextColor="White" Text="CREATE" FontSize="25" TextTransform="Uppercase" Margin="10,0,0,0"/>
+                    <Label 
+                           TextColor="White" 
+                           Text="Concot unique Cocktails !" 
+                           FontSize="20"/>
+                </StackLayout>
+
+                <StackLayout >
+                    <Label TextColor="White" Text="FIND" FontSize="25" TextTransform="Uppercase" Margin="10,0,0,0"/>
+                    <Label  
+                           TextColor="White" 
+                           Text="Inform yourself on cocktails to make them !" 
+                           FontSize="20"/>
+                </StackLayout>
+            </FlexLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
