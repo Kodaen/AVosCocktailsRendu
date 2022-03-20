@@ -15,6 +15,9 @@
                     TextTransform="Uppercase"
         />
     </Shell.TitleView>
+    
+    <!--On utilise un scrollview au cas où on cocktail aurait beaucoup d'ingrédients
+        ou simplement de longues instructions-->
     <ScrollView BackgroundColor="#AC1522">
         <StackLayout Spacing="0">
 
@@ -37,8 +40,11 @@
                 />
 
 
-
-        <FlexLayout x:Name="FlexTags" JustifyContent="SpaceEvenly" Wrap="Wrap" Margin="0,7"/>
+        <!--On utilise un flex layout pour les tags.-->
+        <FlexLayout x:Name="FlexTags" 
+                    JustifyContent="SpaceEvenly"
+                    Wrap="Wrap" 
+                    Margin="0,7"/>
 
 
 

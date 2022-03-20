@@ -210,7 +210,7 @@ namespace AVosCocktails.ViewModel
                     }
 
 
-                    //Une fois qu'on a tous nos ingrédients on les mets les concat dans un string pour la base.
+                    //Une fois qu'on a tous nos ingrédients on les concat dans un string pour la base.
                     //Cependant on remettra ses ingrédients dans un array pour les faire afficher dans les
                     //détails, d'où la présence de deux variable pour définir nos cocktails (BDCocktail et
                     //LocalCocktail)
@@ -228,7 +228,7 @@ namespace AVosCocktails.ViewModel
             //Comme indiqué précédemment, SQLite ne nous permet pas de stocker des arrays de string, or pour notre page de détails on en a besoin
             //Ce qui explique pourquoi on passe de nos BDCocktail de la base à nos LocalCocktail.
             foreach (BDCocktail CocktailDBTemp in ListeDeCocktailDBTemp) {
-                //Pour pourvoir afficher nos cocktails ajouté en haut de la liste
+                //La condition sur l'Id sert à pourvoir afficher nos cocktails ajouté en haut de la liste
                 if (CocktailDBTemp.Id < 50)
                 {
                     ListeDeCocktailLocalTemp.Add(new LocalCocktail()

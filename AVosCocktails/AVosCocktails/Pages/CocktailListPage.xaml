@@ -1,9 +1,19 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AVosCocktails.Pages.CocktailListPage"
-             Shell.NavBarIsVisible="False">
+             Shell.BackgroundColor="#88111B">
+    <Shell.TitleView>
+        <Entry x:Name="nameEntry"
+                   TextColor="White" 
+                   FontAttributes="Bold,Italic" 
+                   FontSize="20"
+                   Placeholder="Name"
+                   Completed="nameEntry_Completed"
+                   ClearButtonVisibility="WhileEditing"
+                   />
+    </Shell.TitleView>
+    
     <ContentPage.Content>
-        
         <CollectionView
             SelectionMode="Single"
             SelectionChanged="CollectionView_SelectionChanged"            
@@ -13,26 +23,11 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Margin="1.5">
-                        <!--<Label
-                                FontAttributes="Bold"
-                                FontSize="Subtitle"
-                                Text="{Binding Name}"
-                                TextColor="White"
-                                WidthRequest="500"
-                                HorizontalTextAlignment="Center"
-                            
-                            />
 
-                        <Image 
-                                Source="{Binding Image}"
-                                Aspect="AspectFill"
-                                HeightRequest="100"
-                                HorizontalOptions="FillAndExpand"
-                                VerticalOptions="FillAndExpand"
-                                
-                            >
-
-                        </Image>-->
+                        <!--Pour pourvoir obtenir du texte par dessus notre image de cocktail
+                            On utilise une grid et on met sur la même case notre texte et notre
+                            image (pareil pour le tag). Avec les margins on gère l'emplacement du
+                            texte et du tag-->
                         <Grid RowSpacing="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -43,7 +38,7 @@
                                    Aspect="AspectFill"
                                    HeightRequest="100"
                                    HorizontalOptions="FillAndExpand"
-                                   VerticalOptions="FillAndExpand" />
+                                   VerticalOptions="FillAndExpand"/>
                             <Label Grid.Row="0" Grid.Column="0"
                                    Text="{Binding Name}"
                                    HorizontalOptions="FillAndExpand"
@@ -60,8 +55,13 @@
                                    Margin="0,40,0,0"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center">
+                                <!--On a décidé de n'afficher qu'un seul tag pour éviter
+                                    que ça ne prenne de la place pour rien, surtout qu'en
+                                    général l'API en donne 2 ou 3 par cocktails donc en avoir
+                                    un donne déjà une bonne idée de ce à quoi l'utilisateur
+                                    peut s'attendre-->
                                 <Label
-                                    Text="{Binding Tags[0]}"
+                                    Text="{Binding Tags[0]}"       
                                     BackgroundColor="White"
                                     TextColor="Black"
                                     FontSize="15"

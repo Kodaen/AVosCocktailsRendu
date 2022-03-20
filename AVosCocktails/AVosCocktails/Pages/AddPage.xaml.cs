@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+//Page d'ajout de cocktails
 namespace AVosCocktails.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -22,7 +23,11 @@ namespace AVosCocktails.Pages
         {
             InitializeComponent();
 
-            //On initialise notre picker
+            //On initialise notre picker.
+            //Ce picker sert à choisir si on veut rentrer une image
+            //depuis une URL, ou alors depuis la galerie du téléphone.
+            //On avait pas vraiment d'attributs à associer à un picker
+            //sur nos cocktails.
             var photoMode = new List<string>();
             photoMode.Add("From URL");
             photoMode.Add("From Galery");
@@ -30,6 +35,7 @@ namespace AVosCocktails.Pages
             picker.ItemsSource = photoMode;
         }
 
+        //Bouton d'envoie de nos cocktails
         async void OnButtonClicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(nameEntry.Text)

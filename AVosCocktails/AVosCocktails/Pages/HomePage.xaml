@@ -27,14 +27,20 @@
                    Margin="0, -6 , 0, 0"
                    />
 
-
+            <!--On avait pas beaucoup d'utilité pour un flexlayout dans notre page d'accueil
+                D'après les maquettes que nous avions fait.
+                On en a utilisé un dans notre detailPage cependant.-->
             <FlexLayout JustifyContent="SpaceAround"
                         VerticalOptions="FillAndExpand"
                         AlignItems="Start"
                         Direction="Column"
                         >
                 <StackLayout >
-                    <Label TextColor="White" Text="DISCOVER" FontSize="25" TextTransform="Uppercase" Margin="10,0,0,0" />
+                    <Label TextColor="White" 
+                           Text="DISCOVER" 
+                           FontSize="25" 
+                           TextTransform="Uppercase" 
+                           Margin="10,0,0,0" />
                     <Label 
                            TextColor="White" 
                            Text="Cocktails you've never seen before !" 
@@ -42,7 +48,11 @@
                 </StackLayout>
 
                 <StackLayout>
-                    <Label TextColor="White" Text="CREATE" FontSize="25" TextTransform="Uppercase" Margin="10,0,0,0"/>
+                    <Label TextColor="White" 
+                           Text="CREATE" 
+                           FontSize="25" 
+                           TextTransform="Uppercase" 
+                           Margin="10,0,0,0"/>
                     <Label 
                            TextColor="White" 
                            Text="Concot unique Cocktails !" 
@@ -50,7 +60,11 @@
                 </StackLayout>
 
                 <StackLayout >
-                    <Label TextColor="White" Text="FIND" FontSize="25" TextTransform="Uppercase" Margin="10,0,0,0"/>
+                    <Label TextColor="White" 
+                           Text="FIND" 
+                           FontSize="25" 
+                           TextTransform="Uppercase" 
+                           Margin="10,0,0,0"/>
                     <Label  
                            TextColor="White" 
                            Text="Inform yourself on cocktails to make them !" 

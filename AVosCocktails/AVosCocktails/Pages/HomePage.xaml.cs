@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+//Page d'accueil
 namespace AVosCocktails.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
